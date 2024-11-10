@@ -81,10 +81,13 @@ output_folder=os.path.join( cwd, "output")
 dir_generator(output_folder)
 
 #scelta del sorgente per le stazioni meteorologiche
-input_file=choose_from_list( read_directory_content(input_folder, ".csv"), "Scegli il sorgente delle stazioni meteo: " )
-input_file_path=os.path.join(input_folder, input_file)
+#input_file=choose_from_list( read_directory_content(input_folder, ".csv"), "Scegli il sorgente delle stazioni meteo: " )
+#input_file_path=os.path.join(input_folder, input_file)
+input_file="test.csv"    #queste due righe sostituiscono le due righe precedenti
+input_file_path=os.path.join(cwd, input_file)    #queste due righe sostituiscono le due righe precedenti
 
-rest_time=int( input("Ogni quanti minuti vuoi aggiornare i dati? ") )
+rest_time=45
+#rest_time=int( input("Ogni quanti minuti vuoi aggiornare i dati? ") )
 
 cond=True
 while cond==True:
